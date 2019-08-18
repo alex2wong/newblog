@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[4],{188:function(o,t,n){"use strict";n.r(t);var e={props:["source"],mounted:function(){}},s=n(0),u=Object(s.a)(e,function(){var o=this.$createElement,t=this._self._c||o;return t("div",[t("audio",{attrs:{src:this.source,autoplay:"",preload:"auto",loop:"",controls:""}})])},[],!1,null,null,null);t.default=u.exports}}]);
