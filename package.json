@@ -1,5 +1,6 @@
 {
   "devDependencies": {
+    "@types/chart.js": "^2.8.1",
     "@vuepress/plugin-blog": "^1.2.4",
     "@vuepress/theme-blog": "^1.2.3",
     "vuepress": "^1.0.3"
@@ -7,5 +8,8 @@
   "scripts": {
     "dev": "vuepress dev",
     "build": "vuepress build"
+  },
+  "dependencies": {
+    "chart.js": "^2.8.0"
   }
 }
