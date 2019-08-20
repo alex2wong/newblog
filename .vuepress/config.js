@@ -12,6 +12,7 @@ module.exports = {
   ],
   theme: "@vuepress/default",
   themeConfig: {
+    logo: '/assets/logo.png',
     repo: 'alex2wong/newblog',
     lastUpdated: 'Last Updated', // string | boolean
     // Please keep looking down to see the available options.
