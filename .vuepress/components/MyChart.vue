@@ -11,6 +11,8 @@
 // import Vue, { Component } from "vue";
 import Chart from "chart.js";
 
+const palette = ['#F38181', '#F54EA2', '#FF7676', '#6078EA', '#622774', '#C53364', '#EA6060'];
+
 export default {
   props: {
     type: {
@@ -33,7 +35,7 @@ export default {
         type: this.type,
         data: {
           labels: this.labels,
-          datasets: this.data,
+          datasets: this.data.map((dataset) => ({ backgroundColor: palette, ...dataset })),
         },
         options: {
           scales: {
