@@ -11,6 +11,6 @@
   },
   "dependencies": {
     "chart.js": "^2.8.0",
-    "vudio.js": "^1.0.3"
+    "vudio.js": "git+https://github.com/alex2wong/vudio.js.git"
   }
 }

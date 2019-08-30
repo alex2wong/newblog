@@ -23,6 +23,7 @@
   .player-control {
     display: flex;
     flex-direction: row;
+    margin-top: 5px;
   }
   .player-cont button {
     display: inline-block;
@@ -52,7 +53,7 @@ export default {
   },
   data() {
     return {
-      types: ['waveform', 'circleWave'],
+      types: ['waveform', 'circlewave'],
       vudio: null,
     }
   },
@@ -62,8 +63,8 @@ export default {
       height: 200,
       effect: 'waveform',
       // accuracy : 64,
-      circleWave: {
-        circleRadius: 80,
+      circlewave: {
+        circleRadius: 75,
         maxHeight: 20,
       },
     });
