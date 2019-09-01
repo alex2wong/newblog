@@ -2,7 +2,9 @@
   <div class="player-cont">
     <canvas ref="canv" width="400" height="100" class="player-canv"></canvas>
     <div class="player-control">
-      <audio ref="audio" :src="source" autoplay preload="auto" loop controls></audio>
+      <audio ref="audioProxy" :src="source[curIndex].url" autoplay controls></audio>
+      <button @click="playback(-1)"><</button>
+      <button @click="playback(1)">></button>
       <button @click="changeType(0)">跳舞的柱</button>
       <button @click="changeType(1)">围着跳舞</button>
     </div>
@@ -14,8 +16,8 @@
     flex-direction: column;
     align-items: center;
   }
-  audio {
-    /* display: none; */
+  .player-control audio {
+    height: 40;
   }
   .player-canv {
     background: #51074b;
@@ -24,11 +26,11 @@
     display: flex;
     flex-direction: row;
     margin-top: 5px;
+    align-items: center;
   }
   .player-cont button {
     display: inline-block;
-    height: 52px;
-    min-width: 120px;
+    height: 40px;
     margin: 0 5px;
     padding: 0 20px;
     color: #333;
@@ -48,24 +50,27 @@ import Vudio from 'vudio.js';
 export default {
   props: {
     source: {
-      type: String,
+      type: Array,
     },
   },
   data() {
     return {
       types: ['waveform', 'circlewave'],
       vudio: null,
+      aplayer: null,
+      curIndex: 0,
     }
   },
   mounted () {
-    const vudio = new Vudio(this.$refs.audio, this.$refs.canv, {
+    const vudio = new Vudio(this.$refs.audioProxy, this.$refs.canv, {
       width: 350,
       height: 200,
       effect: 'waveform',
       // accuracy : 64,
       circlewave: {
-        circleRadius: 75,
-        maxHeight: 20,
+        circleRadius: 60,
+        maxHeight: 30,
+        fadeSide: false,
       },
     });
     this.vudio = vudio;
@@ -77,6 +82,10 @@ export default {
         effect: this.types[index]
       });
     },
+    playback(index) {
+      this.curIndex = this.curIndex + index > this.source.length - 1 ? this.curIndex :
+        this.curIndex + index < 0 ? 0 : this.curIndex + index;
+    }
   },
 }
 </script>
