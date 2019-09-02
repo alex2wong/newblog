@@ -2,7 +2,7 @@
   <div class="player-cont">
     <canvas ref="canv" width="400" height="100" class="player-canv"></canvas>
     <div class="player-control">
-      <audio ref="audioProxy" :src="source[curIndex].url" autoplay controls></audio>
+      <audio ref="audioProxy" src="" crossorigin="anonymous" autoplay controls></audio>
       <button @click="playback(-1)"><</button>
       <button @click="playback(1)">></button>
       <button @click="changeType(0)">跳舞的柱</button>
@@ -74,6 +74,7 @@ export default {
       },
     });
     this.vudio = vudio;
+    this.$refs.audioProxy.src = this.source[this.curIndex].url;
     vudio.dance();
   },
   methods: {
@@ -85,6 +86,8 @@ export default {
     playback(index) {
       this.curIndex = this.curIndex + index > this.source.length - 1 ? this.curIndex :
         this.curIndex + index < 0 ? 0 : this.curIndex + index;
+      this.$refs.audioProxy.src = this.source[this.curIndex].url;
+      this.$refs.audioProxy.play();
     }
   },
 }
