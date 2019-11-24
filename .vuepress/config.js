@@ -1,7 +1,7 @@
 // .vuepress/config.js
 module.exports = {
-  title: "Alex's Blog",
-  description: "Blog rendered by Vuepress",
+  title: "皮皮修乐园",
+  description: "黄益修的博客",
   markdown: {
     lineNumbers: true,
     // markdown-it-toc 的选项
@@ -31,6 +31,7 @@ module.exports = {
       }
     ],
     footer: {
+      // 'MIT Licensed | Copyright © 2018-present Alex2wong'
       contact: [
         {
           type: "github",
