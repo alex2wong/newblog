@@ -2,7 +2,7 @@
 
 <img src='./avatar.gif' width=80 height=auto />
 
-黄益修，热爱数据可视化的前端工程师，喜欢摄影、烹饪、带娃中~
+黄益修，热爱数据可视化的前端工程师，喜欢摄影、烹饪、炒股买基、带娃中~
 
 电子邮箱：huangyixiu188@hotmail.com
 
@@ -43,7 +43,7 @@
 移动端 Cloud Management App 的开发，基于react-native开发移动端App，支持对账户下所有防火墙设备进行查看和管理。
 
 主要负责 `Icon`、
-`Expandable List`、筛选套件等组件开发，`dashboard、ACL、Nat Policy`等页面的开发维护。参与了最初始的项目搭建、navigation 的设计与实现
+`Expandable List`、`Bottom Modal`、筛选套件等组件开发，`Dashboard、Policy`等页面的开发维护。参与了最初始的项目搭建、navigation 的设计与实现
 
 - 2019.2-2019.8 公司 Wireless Cloud 管理系统开发与维护
 
