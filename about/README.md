@@ -67,11 +67,11 @@
 
 ### 开源项目
 
-![gallery](./canvas.jpg)
+<img src='./canvas.jpg' width=400 height=auto style="" />
 
 [↑ 基于canvas的mapbox-gl插件库](https://github.com/alex2wong/mapbox-plugins)
 
-<img src='./vudio.jpg' width=500 height=auto style="margin-left:15px" />
+<img src='./vudioshot.jpg' width=600 height=auto style="margin-left:15px" />
 
 [↑ canvas 音频可视化库 vudio.js](https://github.com/alex2wong/vudio.js)
 

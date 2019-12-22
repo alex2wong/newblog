@@ -45,7 +45,7 @@
   }
 </style>
 <script>
-import Vudio from 'vudio.js';
+import Vudio from 'vudio';
 
 export default {
   props: {
@@ -55,7 +55,7 @@ export default {
   },
   data() {
     return {
-      types: ['waveform', 'circlewave'],
+      types: ['waveform', 'circlebar'],
       vudio: null,
       aplayer: null,
       curIndex: 0,
@@ -65,10 +65,13 @@ export default {
     const vudio = new Vudio(this.$refs.audioProxy, this.$refs.canv, {
       width: 350,
       height: 200,
-      effect: 'waveform',
+      effect: 'circlebar',
       // accuracy : 64,
-      circlewave: {
-        circleRadius: 60,
+      waveform: {
+        color: ['#eee', '#1bbc9b']
+      },
+      circlebar: {
+        circleRadius: 70,
         maxHeight: 30,
         fadeSide: false,
       },

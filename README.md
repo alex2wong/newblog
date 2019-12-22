@@ -36,7 +36,7 @@
   :labels="['day1','day2','day3','day4','day5','day6','day7']"
 />
 
-以上是一个vue组件渲染的图表
+> 以上是一个vue组件渲染的图表
 
 在markdown中也支持直接使用插值表达式，其实你可以简单地理解，这个markdown文件也就是 vue 组件的`template`部分，其中的插值表达式都会经过 vue.js 的编译，经过render函数的渲染，最终形式是可交互的`html`。例如以下等号后面的数字2 就是插值表达式计算所得
 
@@ -51,6 +51,8 @@
 
 - [About Me](about)
 
+- [Magic Slides](posts/slides.html)
+
 - [Music Blog](posts/music.html)
 
 - [WebGL Lesson](posts/webgl01.html)
@@ -58,7 +60,7 @@
 - [Summer](posts/summer.html)
 
 
-```js
+```js{2}
 export default {
   title: "blog",
   author: "alex",
