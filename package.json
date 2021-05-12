@@ -10,7 +10,7 @@
     "build": "vuepress build"
   },
   "dependencies": {
-    "chart.js": "^2.8.0",
+    "chart.js": "^2.9.4",
     "vudio": "^2.0.5",
     "vudio.js": "git+https://github.com/alex2wong/vudio.js.git",
     "vue-concise-slider": "^3.4.3"
